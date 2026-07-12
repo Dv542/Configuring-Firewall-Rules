@@ -1,0 +1,13 @@
+A packet-filtering firewall acts as a digital security guard at the border of your operating system. It works based on a set of defined rules analyzing network packets:
+
+Inspection: When a packet of data arrives (Inbound) or leaves (Outbound), the firewall inspects its metadata header. This includes the Source IP, Destination IP, Protocol (TCP/UDP), and Port Number (e.g., Port 80 for HTTP, Port 23 for Telnet).
+
+Rule Matching: The firewall checks this metadata against its rule list sequentially (usually from top to bottom, or by specific rule priority).
+
+Action Execution: Once a match is found, it applies the designated action:
+
+Allow/Accept: The packet is let through to the OS/Application.
+
+Block/Drop: The packet is silently discarded (the sender gets a timeout).
+
+Reject: The packet is blocked, but an error message (ICMP destination unreachable) is sent back to the source.
